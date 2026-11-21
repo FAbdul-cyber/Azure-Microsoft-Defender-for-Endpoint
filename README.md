@@ -70,4 +70,27 @@ The objective was to establish a foundation for identity management, role-based 
 
 ---
 
+### Role-Based Access Control (RBAC) and Principle of Least Privilege
+
+Implemented Azure Role-Based Access Control (RBAC) within the Cyberproject1 resource group to manage employee access based on their organizational responsibilities.
+
+
+### Role-Based Access Control (RBAC) and Least Privilege
+
+Assigned Azure RBAC roles within the Cyberproject1 resource group based on each employee's responsibilities.
+
+- Fahima Abdul — Contributor
+- Jennifer Halvey — Reader
+- Kattie Hoven — Security Reader
+
+Restricted permissions to the resource group scope to support the Principle of Least Privilege.
+
+![Azure RBAC Role Assignments](screenshots/02-rbac-role-assignments.png)
+
+*Figure 2: Azure RBAC role assignments.*
+
+---
+
+---
+
 ---
