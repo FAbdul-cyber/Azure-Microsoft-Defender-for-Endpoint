@@ -28,5 +28,17 @@ The project will expand to include endpoint detection and response, controlled a
 
 ---
 
+## What I Learned
+
+Through this project, I have developed a practical understanding of identity security, access management, and introductory threat investigation within a Microsoft Azure environment.
+
+I learned how to create and manage user accounts in Microsoft Entra ID, assign role-based permissions, and apply the Principle of Least Privilege to minimize unnecessary access to cloud resources.
+
+I also gained experience using Kusto Query Language (KQL) within Azure Log Analytics to identify an IP address and investigate its reputation using VirusTotal.
+
+This investigation strengthened my understanding of how threat intelligence can support security analysts in identifying potentially malicious activity.
+
+---
+
 
 ---
