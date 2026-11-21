@@ -90,6 +90,59 @@ Restricted permissions to the resource group scope to support the Principle of L
 *Figure 2: Azure RBAC role assignments.*
 
 ---
+## 2. Network Traffic Analysis and Threat Intelligence
+
+Conducted a network traffic investigation using Azure Log Analytics, Kusto Query Language (KQL), and VirusTotal to identify suspicious inbound SSH traffic and assess IP address reputation.
+
+### Log Analytics Workspace
+
+Configured an Azure Log Analytics workspace for querying and analyzing network traffic data.
+
+![Log Analytics Workspace](screenshots/01-log-analytics-workspace.png)
+
+*Figure 3: Azure Log Analytics workspace.*
+
+### SSH Traffic Investigation Using KQL
+
+Used KQL to filter network traffic targeting SSH (port 22) and identify public source IP addresses.
+
+![SSH Traffic Investigation](screenshots/02-ssh-traffic-investigation.png)
+
+*Figure 4: KQL query filtering SSH traffic.*
+
+Aggregated network flows by source IP address to identify allowed and denied traffic.
+
+![Source IP Analysis](screenshots/03-source-ip-analysis.png)
+
+*Figure 5: Analysis of network flows by source IP address.*
+
+### Threat Intelligence Investigation
+
+Investigated the suspicious IP address 193.32.162.15 using VirusTotal. The IP address was flagged as malicious by 15 out of 92 security vendors and associated with SSH brute-force activity and network scanning in threat intelligence reports.
+
+![VirusTotal Threat Intelligence](screenshots/04-virustotal-threat-intelligence.png)
+
+*Figure 6: IP reputation investigation using VirusTotal.*
+
+### Network Security Group (NSG) Review
+
+Reviewed inbound NSG rules to understand existing network access controls and traffic restrictions.
+
+![NSG Inbound Rules](screenshots/05-nsg-inbound-rules.png)
+
+*Figure 7: Azure Network Security Group rules.*
+
+### Investigation Findings
+
+- Identified suspicious inbound traffic targeting SSH.
+- Observed denied network flows from suspicious source IP addresses.
+- Correlated network traffic findings with external threat intelligence.
+- Reviewed existing network security controls.
+
+No successful SSH connection or system compromise was established by this investigation.
+
+---
+
 
 ---
 
