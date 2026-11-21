@@ -40,5 +40,16 @@ This investigation strengthened my understanding of how threat intelligence can 
 
 ---
 
+## Technologies Used
+
+- Microsoft Azure
+- Microsoft Entra ID
+- Azure Role-Based Access Control (RBAC)
+- Azure Log Analytics
+- Kusto Query Language (KQL)
+- VirusTotal
+
+---
+
 
 ---
