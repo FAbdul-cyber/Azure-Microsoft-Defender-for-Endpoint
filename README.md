@@ -51,5 +51,23 @@ This investigation strengthened my understanding of how threat intelligence can 
 
 ---
 
+## 1. Identity and Access Management
+
+Created and configured test employee accounts in Microsoft Entra ID to simulate an organizational environment with users from different departments.
+
+The following accounts were provisioned:
+
+- Fahima Abdul — Developer
+- Jennifer Halvey — Human Resources (HR)
+- Kattie Hoven — Security
+
+The objective was to establish a foundation for identity management, role-based access control, and the implementation of the Principle of Least Privilege.
+
+
+![Microsoft Entra ID User Accounts](screenshots/01-entra-id-users.png)
+
+*Figure 1: Test employee accounts provisioned in Microsoft Entra ID.*
+
+---
 
 ---
