@@ -200,6 +200,64 @@ Used PowerShell to verify the Defender for Endpoint sensor service and confirm t
 
 ---
 
+## 5. Simulated PowerShell Attack and Endpoint Incident Response
+
+Conducted an authorized PowerShell attack simulation using a Microsoft-provided training script to evaluate Microsoft Defender for Endpoint's threat detection and prevention capabilities.
+
+### Attack Simulation and Prevention
+
+Executed an obfuscated PowerShell script in a controlled lab environment. Microsoft Defender detected malicious script content and blocked its execution.
+
+![PowerShell Attack Blocked](screenshots/12-powershell-attack-blocked.png)
+
+*Figure 12: Malicious PowerShell script execution blocked by endpoint protection.*
+
+### Attack Technique Analysis
+
+Reviewed the PowerShell attack script to understand the techniques behind the simulated malicious activity.
+
+The script demonstrated:
+
+- Base64 decoding using `FromBase64String`.
+- XOR-based deobfuscation using the `-bxor` operator.
+- Reconstruction of decoded content in memory.
+- Attempted dynamic execution using `Invoke-Expression`.
+
+These techniques can be used by threat actors to conceal malicious payloads and evade basic security inspection.
+
+Analyzing the script helped me understand how threat actors can abuse legitimate PowerShell functionality to execute concealed commands.
+
+### Alert and Incident Investigation
+
+Investigated the generated Empire tool detection in the Microsoft Defender portal, reviewing associated alerts, process details, evidence and the process tree.
+
+![Empire Alert Analysis](screenshots/13-mde-empire-alert-analysis.png)
+
+*Figure 13: Microsoft Defender evidence showing malicious PowerShell activity and blocked status.*
+
+### PowerShell Log Analysis Using KQL
+
+Queried Windows PowerShell operational logs in Azure Log Analytics using Event ID 4103 to verify the collection of PowerShell module logging events.
+
+![PowerShell Event Analysis](screenshots/14-powershell-event-4103.png)
+
+*Figure 14: PowerShell operational telemetry retrieved using KQL.*
+
+### Incident Response and Containment
+
+Practiced endpoint containment by isolating the affected virtual machine through Microsoft Defender for Endpoint. Subsequently released the device from isolation after completing the controlled simulation.
+
+### Investigation Findings
+
+- Validated endpoint threat detection and prevention capabilities.
+- Analyzed PowerShell script obfuscation and execution techniques.
+- Investigated malicious PowerShell activity and associated alert evidence.
+- Reviewed process information and the process tree.
+- Verified PowerShell operational log collection using KQL.
+- Practiced endpoint isolation and release from isolation.
+
+---
+
 
 ---
 
