@@ -172,6 +172,34 @@ Developed a KQL query to identify source IP addresses associated with three or m
 
 ---
 
+## 4. Microsoft Defender for Endpoint Onboarding and Verification
+
+Onboarded an Azure Windows Server VM to Microsoft Defender for Endpoint (MDE) to establish endpoint monitoring capabilities.
+
+### Endpoint Onboarding
+
+Executed the Microsoft Defender for Endpoint local onboarding script with administrative privileges.
+
+![Successful MDE Onboarding](screenshots/10-successful-mde-onboarding.png)
+
+*Figure 10: Successful execution of the MDE onboarding script.*
+
+### Sensor and Onboarding Verification
+
+Used PowerShell to verify the Defender for Endpoint sensor service and confirm the local onboarding status.
+
+![MDE Sensor Verification](screenshots/11-mde-sensor-and-onboarding-verification.png)
+
+*Figure 11: Verification of the running Sense service and OnboardingState.*
+
+### Results
+
+- Successfully executed the endpoint onboarding script.
+- Verified that the MDE sensor service (Sense) was running.
+- Confirmed local onboarding status through the Windows Registry (OnboardingState = 1).
+
+---
+
 
 ---
 
