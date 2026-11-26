@@ -258,6 +258,33 @@ Practiced endpoint containment by isolating the affected virtual machine through
 
 ---
 
+## 6. Microsoft Defender Live Response and Threat Remediation
+
+Used Microsoft Defender for Endpoint's Live Response capability to remotely remediate the PowerShell attack script from the simulated security incident.
+
+### Remote File Remediation
+
+Established a Live Response session with the endpoint and executed the `remediate file` command to quarantine the malicious PowerShell script (`AttackScript.ps1`).
+
+### Remediation Verification
+
+Reviewed the remediation output to confirm that the file was successfully quarantined and the operation completed without reported errors.
+
+Used the `dir` command to verify that the script was no longer present in its original directory.
+
+![Live Response File Remediation](screenshots/15-live-response-file-remediation.png)
+
+*Figure 15: Successful file quarantine and remediation verification using Microsoft Defender Live Response.*
+
+### Investigation Findings
+
+- Established a remote Live Response session.
+- Performed manual threat remediation.
+- Successfully quarantined the simulated malicious PowerShell script.
+- Verified remediation status and removal from the original file location.
+
+---
+
 
 ---
 
