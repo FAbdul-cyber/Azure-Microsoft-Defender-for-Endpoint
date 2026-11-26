@@ -143,6 +143,35 @@ No successful SSH connection or system compromise was established by this invest
 
 ---
 
+## 3. Simulated Brute-Force Attack and Failed Authentication Analysis
+
+Simulated a brute-force attack against an Azure Windows Server VM by attempting multiple RDP logins using invalid credentials in a controlled lab environment.
+
+### Failed Authentication Investigation
+
+Queried Windows Security Events using KQL to identify failed authentication attempts (Event ID 4625).
+
+![Failed Logon Events](screenshots/08-failed-logon-event-4625.png)
+
+*Figure 8: Windows failed logon events identified using KQL.*
+
+### Threshold-Based Threat Detection
+
+Developed a KQL query to identify source IP addresses associated with three or more failed authentication events within a 60-minute period.
+
+![Brute Force Detection](screenshots/09-brute-force-detection-query.png)
+
+*Figure 9: KQL detection query identifying 10 failed logon events from a single source IP address.*
+
+### Investigation Findings
+
+- Successfully generated and collected failed authentication events.
+- Identified 10 failed logon events from a single source IP address.
+- Validated threshold-based detection logic using KQL.
+- Observed Windows authentication rejecting invalid credentials.
+
+---
+
 
 ---
 
